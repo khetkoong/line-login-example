@@ -141,7 +141,10 @@ export default function LineLogin() {
         )}
         {code && (
           <Box mt={3}>
-            <Typography variant="h3">
+            <Typography variant="h3" sx={{
+              overflow: 'hidden',
+              wordWrap: 'break-word',
+            }}>
               Callback Code:
             </Typography>
             {' '}
@@ -199,9 +202,9 @@ export default function LineLogin() {
               </Typography>
               <Box>
                 <Typography sx={{
-                overflow: 'hidden',
-                wordWrap: 'break-word',
-              }}>
+                  overflow: 'hidden',
+                  wordWrap: 'break-word',
+                }}>
                   pictureUrl: {lineProfile?.pictureUrl}
                 </Typography>
                 <Image
