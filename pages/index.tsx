@@ -28,19 +28,12 @@ export interface LineProfile {
   pictureUrl: string;
 }
 
-export const getServerSideProps = (context: NextPageContext) => {
-  const { req } = context
-  if (req) {
-    const callbackUrl = req.headers.referer
-    return { props: { callbackUrl } }
-  }
-  return { props: { callbackUrl: null } }
-}
-export default function LineLogin({ callbackUrl }: { callbackUrl: string }) {
+export default function LineLogin() {
   const clientId = process.env.NEXT_PUBLIC_CLIENT_ID
   const state = generateId()
   const scope = 'profile%20openid%20email'
   const clientSecret = process.env.NEXT_PUBLIC_CLIENT_SECRET
+  const callbackUrl = process.env.NEXT_PUBLIC_MY_URL
   const url = `https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=${clientId}&redirect_uri=${callbackUrl}&state=${state}&scope=${scope}&nonce=09876xyz`
 
   const router = useRouter()
