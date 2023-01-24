@@ -165,7 +165,10 @@ export default function LineLogin() {
               <Typography variant="h4">
                 ISSUE TOKEN
               </Typography>
-              <Typography>
+              <Typography sx={{
+                overflow: 'hidden',
+                wordWrap: 'break-word',
+              }}>
                 access_token: {issueToken?.access_token}
               </Typography>
               <Typography>
@@ -195,7 +198,10 @@ export default function LineLogin() {
                 displayName: {lineProfile?.displayName}
               </Typography>
               <Box>
-                <Typography>
+                <Typography sx={{
+                overflow: 'hidden',
+                wordWrap: 'break-word',
+              }}>
                   pictureUrl: {lineProfile?.pictureUrl}
                 </Typography>
                 <Image
