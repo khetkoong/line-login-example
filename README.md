@@ -1,5 +1,5 @@
 ## DEMO
-[https://line-login-example.vercel.app/](TRY DEMO)
+[TRY DEMO HERE](https://line-login-example.vercel.app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
